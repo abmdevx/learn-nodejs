@@ -62,7 +62,10 @@ If I can't do these, I review the lesson before moving forward.
 
 ## 📚 Course Progress
 
-**Current:** A Brief Overview of the Course ✅
+| Status | Lesson                         | Progress  |
+|--------|--------------------------------|-----------|
+| ✅     | A Brief Overview of the Course | Completed |
+| ⌛     | Features of Node.js            | Current   |
 
 I will update my progress as I move through the course.
 
