@@ -66,6 +66,7 @@ If I can't do these, I review the lesson before moving forward.
 |--------|--------------------------------|-----------|
 | ✅     | A Brief Overview of the Course | Completed |
 | ✅     | Features of Node.js            | Completed |
+| ⏳     | Event Loop                     | Current   |
 
 I will update my progress as I move through the course.
 
