@@ -69,7 +69,8 @@ If I can't do these, I review the lesson before moving forward.
 | ✅     | Event Loop                     | Completed |
 | ✅     | Blocking and Non-blocking      | Completed |
 | ✅     | Javascript Everywhere          | Completed |
-| ⏳     | Input                          | Current |
+| ✅     | Input                          | Completed |
+| ⏳     | Console                        | Current |
 
 
 I will update my progress as I move through the course.
