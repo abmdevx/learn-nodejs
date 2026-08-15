@@ -70,7 +70,8 @@ If I can't do these, I review the lesson before moving forward.
 | ✅     | Blocking and Non-blocking      | Completed |
 | ✅     | Javascript Everywhere          | Completed |
 | ✅     | Input                          | Completed |
-| ⏳     | Console                        | Current |
+| ✅     | Console                        | Completed |
+| ⏳     | Buffer                         | Current   |
 
 
 I will update my progress as I move through the course.
