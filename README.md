@@ -71,8 +71,8 @@ If I can't do these, I review the lesson before moving forward.
 | ✅     | Javascript Everywhere          | Completed |
 | ✅     | Input                          | Completed |
 | ✅     | Console                        | Completed |
-| ⏳     | Buffer                         | Current   |
-
+| ✅     | Buffer                         | Completed |
+| ⏳     | Events                         | Current   |
 
 I will update my progress as I move through the course.
 
