@@ -73,7 +73,9 @@ If I can't do these, I review the lesson before moving forward.
 | ✅     | Console                        | Completed |
 | ✅     | Buffer                         | Completed |
 | ✅     | Events                         | Completed |
-| ⏳     | File System                    | Current |
+| ✅     | File System                    | Completed |
+| ✅     | Globals                        | Completed |
+| ⏳     | Modules                        | Current |
 
 I will update my progress as I move through the course.
 
