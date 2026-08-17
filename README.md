@@ -75,7 +75,9 @@ If I can't do these, I review the lesson before moving forward.
 | ✅     | Events                         | Completed |
 | ✅     | File System                    | Completed |
 | ✅     | Globals                        | Completed |
-| ⏳     | Modules                        | Current |
+| ✅     | Modules                        | Completed |
+| ✅     | OS                             | Completed |
+| ⏳     | Process                        | Current   |
 
 I will update my progress as I move through the course.
 
