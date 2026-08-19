@@ -77,7 +77,9 @@ If I can't do these, I review the lesson before moving forward.
 | ✅     | Globals                        | Completed |
 | ✅     | Modules                        | Completed |
 | ✅     | OS                             | Completed |
-| ⏳     | Process                        | Current   |
+| ✅     | Process                        | Completed |
+| ✅     | Net                            | Completed |
+| ⏳     | UDP                            | Current |
 
 I will update my progress as I move through the course.
 
