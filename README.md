@@ -79,7 +79,8 @@ If I can't do these, I review the lesson before moving forward.
 | ✅     | OS                             | Completed |
 | ✅     | Process                        | Completed |
 | ✅     | Net                            | Completed |
-| ⏳     | UDP                            | Current |
+| ✅     | UDP                            | Completed |
+| ⏳     | HTTP                           | Current   |
 
 I will update my progress as I move through the course.
 
