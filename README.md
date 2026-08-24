@@ -80,7 +80,8 @@ If I can't do these, I review the lesson before moving forward.
 | ✅     | Process                        | Completed |
 | ✅     | Net                            | Completed |
 | ✅     | UDP                            | Completed |
-| ⏳     | HTTP                           | Current   |
+| ✅     | HTTP                           | Completed |
+| ⏳     | REPL                           | Current   |
 
 I will update my progress as I move through the course.
 
