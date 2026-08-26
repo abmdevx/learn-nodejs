@@ -82,7 +82,7 @@ If I can't do these, I review the lesson before moving forward.
 | ✅     | UDP                            | Completed |
 | ✅     | HTTP                           | Completed |
 | ✅     | REPL                           | Completed |
-| ⏳     | Packages                       | Current   |
+| ✅     | Packages                       | Completed |
 
 I will update my progress as I move through the course.
 
