@@ -83,6 +83,7 @@ If I can't do these, I review the lesson before moving forward.
 | ✅     | HTTP                           | Completed |
 | ✅     | REPL                           | Completed |
 | ✅     | Packages                       | Completed |
+| ✅     | Project                       | Completed |
 
 I will update my progress as I move through the course.
 
