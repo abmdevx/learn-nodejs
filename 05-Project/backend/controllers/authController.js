@@ -94,4 +94,26 @@ const getMe = async (req, res, next) => {
   }
 };
 
-export { registerUser, loginUser, getMe };
+const googleLogin = async (req, res, next) => {
+  try {
+
+    const { credential } = req.body;
+
+    // 1. Verify Google token
+
+    // 2. Get Google user information
+
+    // 3. Check MongoDB user
+
+    // 4. Create user if doesn't exist
+
+    // 5. Generate your JWT
+
+    // 6. Return user + token
+
+  } catch (error) {
+    next(error);
+  }
+};
+
+export { registerUser, loginUser, getMe, googleLogin };
