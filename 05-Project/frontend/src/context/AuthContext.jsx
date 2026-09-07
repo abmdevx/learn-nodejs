@@ -60,6 +60,33 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const googleLogin = async (credential) => {
+    setError('');
+
+    try {
+      const { data } = await api.post('/auth/google', {
+        credential,
+      });
+
+      localStorage.setItem('token', data.token);
+
+      setUser(data);
+
+      return { success: true };
+    } catch (err) {
+      const message =
+        err.response?.data?.message ||
+        'Google sign-in failed. Please try again.';
+
+      setError(message);
+
+      return {
+        success: false,
+        message,
+      };
+    }
+  };
+
   const logout = () => {
     localStorage.removeItem('token');
     setUser(null);
@@ -71,6 +98,7 @@ export const AuthProvider = ({ children }) => {
     error,
     login,
     register,
+    googleLogin,
     logout,
     isAdmin: user?.role === 'admin',
     isAuthenticated: !!user,

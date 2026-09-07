@@ -1,6 +1,10 @@
 import bcrypt from 'bcrypt';
+import crypto from 'crypto';
+import { OAuth2Client } from 'google-auth-library';
 import User from '../models/User.js';
 import { generateToken } from '../utils/generateToken.js';
+
+const googleClient = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 // @desc    Register a new user
 // @route   POST /api/auth/register
 // @access  Public
@@ -96,20 +100,55 @@ const getMe = async (req, res, next) => {
 
 const googleLogin = async (req, res, next) => {
   try {
-
     const { credential } = req.body;
 
-    // 1. Verify Google token
+    if (!credential) {
+      return res.status(400).json({
+        message: 'Google credential is required',
+      });
+    }
 
-    // 2. Get Google user information
+    const ticket = await googleClient.verifyIdToken({
+      idToken: credential,
+      audience: process.env.GOOGLE_CLIENT_ID,
+    });
 
-    // 3. Check MongoDB user
+    const payload = ticket.getPayload();
 
-    // 4. Create user if doesn't exist
+    const {
+      sub,
+      email,
+      name
+    } = payload;
 
-    // 5. Generate your JWT
+    const user = await User.findOne({ email: email.toLowerCase() });
 
-    // 6. Return user + token
+    if (user) {
+      return res.status(200).json({
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        role: user.role,
+        address: user.address,
+        token: generateToken(user._id),
+      });
+    }
+
+    const newUser = await User.create({
+      name,
+      email: email.toLowerCase(),
+      googleId: sub,
+      role: 'customer',
+    });
+
+    return res.status(201).json({
+      _id: newUser._id,
+      name: newUser.name,
+      email: newUser.email,
+      role: newUser.role,
+      address: newUser.address,
+      token: generateToken(newUser._id),
+    });
 
   } catch (error) {
     next(error);

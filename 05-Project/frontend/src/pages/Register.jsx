@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { GoogleLogin } from '@react-oauth/google';
 import { useAuth } from '../context/AuthContext';
 
 const Register = () => {
-  const { register } = useAuth();
+  const { register, googleLogin } = useAuth();
   const navigate = useNavigate();
 
   const [name, setName] = useState('');
@@ -31,6 +32,10 @@ const Register = () => {
     } else {
       setError(result.message);
     }
+  };
+
+  const handleGoogleSuccess = async ({ credential }) => {
+    
   };
 
   return (
@@ -79,6 +84,12 @@ const Register = () => {
         <button type="submit" className="btn btn-primary btn-block" disabled={submitting}>
           {submitting ? 'Creating account...' : 'Sign Up'}
         </button>
+
+        <div className="auth-divider"><span>or</span></div>
+
+        <GoogleLogin
+          
+        />
 
         <p className="auth-switch">
           Already have an account? <Link to="/login">Login</Link>
