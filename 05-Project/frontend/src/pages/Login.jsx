@@ -31,7 +31,18 @@ const Login = () => {
   };
 
   const handleGoogleSuccess = async ({ credential }) => {
-    
+    setError('');
+    setSubmitting(true);
+
+    const result = await googleLogin(credential);
+
+    setSubmitting(false);
+
+    if (result.success) {
+      navigate(from, { replace: true });
+    } else {
+      setError(result.message);
+    }
   };
 
   return (
@@ -68,7 +79,12 @@ const Login = () => {
         <div className="auth-divider"><span>or</span></div>
 
         <GoogleLogin
-          
+          onSuccess={handleGoogleSuccess}
+          onError={() => {
+            setError('Google login failed');
+          }}
+          useOneTap={true}
+          text="signin_with"
         />
 
         <p className="auth-switch">
