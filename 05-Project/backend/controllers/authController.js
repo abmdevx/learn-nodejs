@@ -3,8 +3,8 @@ import crypto from 'crypto';
 import { OAuth2Client } from 'google-auth-library';
 import User from '../models/User.js';
 import { generateToken } from '../utils/generateToken.js';
+import googleClient from '../utils/googleAuth.js';
 
-const googleClient = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 // @desc    Register a new user
 // @route   POST /api/auth/register
 // @access  Public
